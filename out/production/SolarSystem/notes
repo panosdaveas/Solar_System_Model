@@ -1,0 +1,114 @@
+       ////fib variation//SUN***********
+
+public void drawSphere(float myScale) {
+      float goldenRatio = (sqrt(5) + 1) / 2;
+      float goldenAngle = (2 - goldenRatio) * (2 * PI);
+      float points = 2000;
+          for (float i = 0; i < points; i++) {
+              float theta = 2 * PI * i / goldenRatio;
+              float phi = acos((float) (1 - 2 * (i+ 0.5) / points));
+              PVector v = new PVector();
+              v.x = cos(theta) * cos(phi);
+              v.y = sin(theta) * cos(phi);
+              v.z = sin(phi);
+              PVector angleSun = new PVector(PI/2,angle.y,angle.z);
+              PVector rotated =matrix.matmul(rotation.rotationFull(angleSun), v);
+              rotated.mult(scale);
+              if(rotated.z >= 0) {
+                  point(rotated.x, rotated.y);
+              }
+      }
+      angle.x += speed; angle.y += speed; angle.z += speed;
+    }
+     /////////////////////////////////
+/////////fib - normal- sphere//////
+
+public void drawSphere(float myScale) {
+        float points = 50;
+        float goldenRatio = (float) ((sqrt(5.0F) + 1.0) / 2.0);  // golden ratio = 1.6180339887498948482
+        float goldenAngle= (float) ((2.0 - goldenRatio) * (2.0*PI));  // golden angle = 2.39996322972865332
+
+        for (float j = 0; j <  points; j++){
+            for (float i = 0; i <  points; i+=0.5) {
+                float theta = 2 * PI  * i / goldenRatio;
+                float phi = acos(1 - 2 * i / points);
+                PVector v = new PVector();
+                v.x = cos(theta) * sin(phi);
+                v.y = sin(theta) * sin(phi);
+                v.z = cos(phi);
+                v.normalize();
+                PVector rotated =matrix.matmul(rotation.rotationFull(angle), v);
+                PVector p = matrix.matmul(new projection().projection2D, rotated);
+                p.mult(scale);
+                v.mult(scale);
+                //point(v.x, v.y);
+                point(p.x,p.y);
+            }
+        }
+        angle.x += speed; angle.y += speed; angle.z += speed;
+    }
+
+ ////////////////////// selestial fib/////////
+
+    public void drawSphere(float myScale) {
+        float points = 50;
+        float gr= (float) ((sqrt(5.0F) + 1.0) / 2.0);  // golden ratio = 1.6180339887498948482
+        float ga= (float) ((2.0 - gr) * (2.0*PI));  // golden angle = 2.39996322972865332
+        float k =10;
+        for (float i = 1; i <= points; ++i) {
+            float phi = k * sqrt(i);
+            for (float j = 1; j <= 2 * points; ++j){
+            float theta = ga * j;
+                PVector v = new PVector();
+                v.x = cos(theta) * cos(phi);
+                v.y = sin(theta) * cos(phi);
+                v.z = sin(phi);
+                v.normalize();
+                PVector rotated =matrix.matmul(rotation.rotationFull(angle), v);
+                //rotated.normalize();
+                rotated.mult(scale);
+                //if(rotated.z >= 0) {
+                    point(rotated.x, rotated.y);
+                //}
+                //if (v.z > 0) {
+                    v.mult(scale);
+                    point(v.x, v.y);
+                //}
+            }
+        }
+        angle.x += speed; angle.y += speed; angle.z += speed;
+    }
+
+    /////////// more celestial
+
+    public void drawSphere(float myScale) {
+        float points = 50;
+        float gr= (float) ((sqrt(5.0F) + 1.0) / 2.0);  // golden ratio = 1.6180339887498948482
+        float ga= (float) ((2.0 - gr) * (2.0*PI));  // golden angle = 2.39996322972865332
+        float k =5;
+        for (float j = 1; j <=  points; ++j){
+            float theta = ga * j;
+            for (float i = 1; i <= 2 * points; ++i) {
+                //float phi = asin((float) (-1.0 + 2.0 * i / (points+1)));
+                float phi = k * sqrt(i);
+                PVector v = new PVector();
+                v.x = cos(theta) * cos(phi);
+                v.y = sin(theta) * cos(phi);
+                v.z = sin(phi);
+                v.normalize();
+                PVector rotated =matrix.matmul(rotation.rotationFull(angle), v);
+                rotated.normalize();
+                rotated.mult(scale);
+                //if(rotated.z >= 0) {
+                point(rotated.x, rotated.y);
+                //}
+                //if (v.z > 0) {
+                v.mult(scale);
+                point(v.x, v.y);
+                //}
+            }
+        }
+        angle.x += speed; angle.y += speed; angle.z += speed;
+    }
+//////////
+

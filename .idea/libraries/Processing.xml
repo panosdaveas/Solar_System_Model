@@ -1,0 +1,34 @@
+<component name="libraryTable">
+  <library name="Processing">
+    <CLASSES>
+      <root url="file:///Applications/Processing.app" />
+      <root url="file:///Applications/Processing.app/Contents/Java/core/library" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file:///Applications/Processing.app/Contents/Java/core/library" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/generated" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/libraries/dxf/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/libraries/io/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/libraries/net/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/libraries/pdf/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/libraries/serial/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/libraries/svg/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/modes/java/test" />
+      <root url="file:///Applications/Processing.app/Contents/Java/tools/MovieMaker/src" />
+      <root url="file:///Applications/Processing.app/Contents/Java/core/library" />
+      <root url="jar:///Applications/Processing.app/Contents/Java/core/library/jogl-all-src.jar!/src/demos" />
+      <root url="jar:///Applications/Processing.app/Contents/Java/core/library/jogl-all-src.jar!/src/jogl/classes" />
+      <root url="jar:///Applications/Processing.app/Contents/Java/core/library/jogl-all-src.jar!/src/nativewindow/classes" />
+      <root url="jar:///Applications/Processing.app/Contents/Java/core/library/jogl-all-src.jar!/src/newt/classes" />
+      <root url="jar:///Applications/Processing.app/Contents/Java/core/library/jogl-all-src.jar!/src/oculusvr/classes" />
+      <root url="jar:///Applications/Processing.app/Contents/Java/core/library/jogl-all-src.jar!/src/test" />
+      <root url="jar:///Applications/Processing.app/Contents/Java/core/library/jogl-all-src.jar!/src/test-native/bug1398" />
+    </SOURCES>
+    <jarDirectory url="file:///Applications/Processing.app/Contents/Java/core/library" recursive="false" />
+    <jarDirectory url="file:///Applications/Processing.app/Contents/Java/core/library" recursive="false" type="SOURCES" />
+  </library>
+</component>
